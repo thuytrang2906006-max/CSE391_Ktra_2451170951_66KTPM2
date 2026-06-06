@@ -1,0 +1,131 @@
+body {
+  background-color: #f4f6f8;
+}
+
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 16px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.header h1 {
+  margin: 0;
+  font-weight: bold;
+}
+
+.btn-purple {
+  background-color: #6f42c1;
+  color: white;
+  border-radius: 8px;
+}
+
+.btn-purple:hover {
+  background-color: #59339d;
+  color: white;
+}
+
+.card-task {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  margin-bottom: 12px;
+}
+
+.card-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+}
+
+.task-name {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+
+.task-priority {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+}
+
+.icon-btn {
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border-radius: 8px;
+  border: 1px solid #dee2e6;
+  background: white;
+}
+
+.modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-overlay.show {
+  display: flex;
+}
+
+.modal-box {
+  background: white;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 480px;
+  padding: 24px;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.modal-header h4 {
+  margin: 0;
+}
+
+.modal-body {
+  margin-bottom: 16px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group input {
+  border-radius: 8px;
+}
+
+.priority-btns {
+  display: flex;
+  gap: 16px;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  border: none;
+  padding: 0;
+}
+
+.hidden {
+  display: none;
+}
