@@ -11,7 +11,7 @@
     <main class="container">
       <header class="header">
         <h1>Task List</h1>
-        <!-- Bootstrap: btn btn-purple -->
+        <!-- Add task -->
         <button class="btn btn-purple px-4 py-2 fw-bold" onclick="openModal()">
           + Add Task
         </button>
@@ -84,6 +84,7 @@
               >
             </div>
             <div>
+              <!--nút sửa-->
               <button class="btn icon-btn me-2">&#128221;</button>
               <button class="btn icon-btn text-danger">&#128465;</button>
             </div>
@@ -96,7 +97,7 @@
         <div class="modal-box" onclick="event.stopPropagation()">
           <div class="modal-header">
             <h4 class="fw-bold">Add Task</h4>
-            <!-- Bootstrap: btn-close -->
+            <!-- nut dong -->
             <button
               type="button"
               class="btn-close"
@@ -120,7 +121,7 @@
                 >Priority</label
               >
               <div class="priority-btns">
-                <!-- Bootstrap: btn btn-outline-* -->
+                <!-- Nút Priority -->
                 <button type="button" class="btn btn-danger">High</button>
                 <button type="button" class="btn btn-outline-warning">
                   Medium
@@ -133,7 +134,7 @@
           </div>
 
           <div class="modal-footer">
-            <!-- Bootstrap: btn btn-secondary -->
+            <!-- nút add -->
             <button class="btn btn-secondary px-4" onclick="submitTask()">
               Add
             </button>
