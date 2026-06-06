@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task list</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header class="header">
+        <h1>Task List</h1>
+        <!-- Bootstrap: btn btn-purple -->
+        <button class="btn btn-purple px-4 py-2 fw-bold" onclick="openModal()">
+          + Add Task
+        </button>
+      </header>
+
+      <section class="task-container">
+        <article class="card-task">
+          <div class="card-body">
+            <div class="task-name">
+              <small class="text-muted">Task</small>
+              <span class="fw-bold">Go to gym</span>
+            </div>
+            <div class="task-priority">
+              <small class="text-muted">Priority</small>
+              <!-- Bootstrap: text-danger -->
+              <span class="fw-bold text-danger">High</span>
+            </div>
+            <div>
+              <!-- Bootstrap: badge -->
+              <span
+                class="badge bg-light text-dark border px-3 py-2 rounded-pill"
+                >To Do</span
+              >
+            </div>
+            <div>
+              <!-- Bootstrap: btn icon-btn -->
+              <button class="btn icon-btn me-2">&#128221;</button>
+              <button class="btn icon-btn text-danger">&#128465;</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="card-task">
+          <div class="card-body">
+            <div class="task-name">
+              <small class="text-muted">Task</small>
+              <span class="fw-bold">Read a book</span>
+            </div>
+            <div class="task-priority">
+              <small class="text-muted">Priority</small>
+              <span class="fw-bold text-success">Low</span>
+            </div>
+            <div>
+              <span
+                class="badge bg-light text-dark border px-3 py-2 rounded-pill"
+                >Done</span
+              >
+            </div>
+            <div>
+              <button class="btn icon-btn me-2">&#128221;</button>
+              <button class="btn icon-btn text-danger">&#128465;</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="card-task">
+          <div class="card-body">
+            <div class="task-name">
+              <small class="text-muted">Task</small>
+              <span class="fw-bold">Go to market</span>
+            </div>
+            <div class="task-priority">
+              <small class="text-muted">Priority</small>
+              <span class="fw-bold text-warning">Medium</span>
+            </div>
+            <div>
+              <span
+                class="badge bg-light text-dark border px-3 py-2 rounded-pill"
+                >In Progress</span
+              >
+            </div>
+            <div>
+              <button class="btn icon-btn me-2">&#128221;</button>
+              <button class="btn icon-btn text-danger">&#128465;</button>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <!-- Modal -->
+      <div class="modal-overlay" id="modalOverlay" onclick="closeModal()">
+        <div class="modal-box" onclick="event.stopPropagation()">
+          <div class="modal-header">
+            <h4 class="fw-bold">Add Task</h4>
+            <!-- Bootstrap: btn-close -->
+            <button
+              type="button"
+              class="btn-close"
+              onclick="closeModal()"
+            ></button>
+          </div>
+
+          <div class="modal-body">
+            <div class="form-group">
+              <label class="form-label text-muted small fw-bold">Task</label>
+              <input
+                type="text"
+                id="taskInput"
+                class="form-control"
+                placeholder="Type your task here..."
+              />
+              <div id="taskError" class="text-danger small mt-1 hidden"></div>
+            </div>
+            <div class="form-group">
+              <label class="form-label text-muted small fw-bold"
+                >Priority</label
+              >
+              <div class="priority-btns">
+                <!-- Bootstrap: btn btn-outline-* -->
+                <button type="button" class="btn btn-danger">High</button>
+                <button type="button" class="btn btn-outline-warning">
+                  Medium
+                </button>
+                <button type="button" class="btn btn-outline-success">
+                  Low
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <!-- Bootstrap: btn btn-secondary -->
+            <button class="btn btn-secondary px-4" onclick="submitTask()">
+              Add
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="js_bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
